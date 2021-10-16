@@ -113,6 +113,10 @@ func errHandler(ctx *cli.Context, err error) {
 		return
 	}
 
+	if _, ok := err.(*stopErr); ok {
+		return
+	}
+
 	notificationsService, err2 := notifications.ContextService(ctx.Context)
 	if err2 != nil {
 		// We can`t report user about error
