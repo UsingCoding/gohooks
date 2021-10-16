@@ -5,7 +5,7 @@ Simple git hooks written in go that installs **globally** to your machine
 ## Install
 
 ```shell
-curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+curl -fsSL https://raw.github.com/UsingCoding/gohooks/master/install.sh | bash
 ```
 
 ## Hooks
