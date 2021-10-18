@@ -48,7 +48,7 @@ EOF
 }
 
 # Installing gohooks binary at $PATH
-curl -L $RELEASE_URL -o "$GO_HOOKS_EXECUTABLE_PATH" || exit 1
+curl -Ls $RELEASE_URL -o "$GO_HOOKS_EXECUTABLE_PATH" || exit 1
 chmod +x "$GO_HOOKS_EXECUTABLE_PATH"
 echo -e "${LIGHT_CYAN}$GO_HOOKS_EXECUTABLE installed at $GO_HOOKS_EXECUTABLE_PATH${CC}"
 
