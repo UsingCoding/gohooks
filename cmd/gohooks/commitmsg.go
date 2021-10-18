@@ -16,7 +16,7 @@ func executeCommitMsg(ctx *cli.Context) error {
 		return errors.New("not enough args to call commit-msg hook")
 	}
 
-	// SKip commit message check
+	// Allow skip commit message check with set up env var GOHOOKS_UNPROTECT_COMMIT_MESSAGE
 	if ctx.Bool("unprotect-commit-message") {
 		return nil
 	}

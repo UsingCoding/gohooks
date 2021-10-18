@@ -74,7 +74,7 @@ func main() {
 						Flags: []cli.Flag{
 							&cli.BoolFlag{
 								Name:    "unprotect-commit-message",
-								EnvVars: []string{"GOHOOK_UNPROTECT_COMMIT_MESSAGE"},
+								EnvVars: []string{"GOHOOKS_UNPROTECT_COMMIT_MESSAGE"},
 							},
 						},
 					},
@@ -85,7 +85,7 @@ func main() {
 						Flags: []cli.Flag{
 							&cli.BoolFlag{
 								Name:    "unprotect-master",
-								EnvVars: []string{"GOHOOK_UNPROTECT_MASTER"},
+								EnvVars: []string{"GOHOOKS_UNPROTECT_MASTER"},
 							},
 						},
 					},

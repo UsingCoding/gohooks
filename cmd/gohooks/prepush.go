@@ -26,7 +26,7 @@ func executePrePush(ctx *cli.Context) error {
 		return nil
 	}
 
-	// Allow master push set up env var GOHOOK_UNPROTECT_MASTER
+	// Allow master push with set up env var GOHOOKS_UNPROTECT_MASTER
 	if !ctx.Bool("unprotect-master") {
 		return errors.New("cannot push to the protected master")
 	}

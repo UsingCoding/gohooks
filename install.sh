@@ -8,7 +8,7 @@ GO_HOOKS_EXECUTABLE="gohooks"
 
 GO_HOOKS_EXECUTABLE_PATH="$HOME/.local/bin/$GO_HOOKS_EXECUTABLE"
 
-RELEASE_URL="https://github.com/UsingCoding/gohooks/releases/download/v0.1.2/gohooks"
+RELEASE_URL="https://github.com/UsingCoding/gohooks/releases/download/v0.1.3/gohooks"
 
 GIT_HOOKS=("commit-msg" "pre-push")
 
