@@ -79,13 +79,6 @@ if [ ! -f "$GO_HOOKS_CONFIG" ]; then
     echo -e "${LIGHT_CYAN}Config not found:${CC} creating new one"
 
     configTemplate > "$GO_HOOKS_CONFIG"
-
-    if [[ -z "$EDITOR" ]]; then
-       echo -e "${RED}You are a bad linux user: your env \$EDITOR is empty:${CC} edit $GO_HOOKS_CONFIG by your own way"
-   else
-       $EDITOR "$GO_HOOKS_CONFIG"
-    fi
-
 fi
 
 echo -e "${LIGHT_CYAN}go-hooks as global git hooks installed${CC}"

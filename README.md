@@ -4,11 +4,6 @@ Simple git hooks written in go that installs **globally** to your machine
 
 ## Install
 
-### Requirements
-
-- Go (`$GOPATH` used for installation)
-- Add `$GOPATH` to your `$PATH`
-
 ```shell
 curl -fsSL https://raw.github.com/UsingCoding/gohooks/master/install.sh | bash
 ```
@@ -19,13 +14,13 @@ curl -fsSL https://raw.github.com/UsingCoding/gohooks/master/install.sh | bash
 
 Checks that commit message starts with branch name
 
-You can disable it via ENV variable `GOHOOK_UNPROTECT_COMMIT_MESSAGE`
+You can disable it via ENV variable `GOHOOKS_UNPROTECT_COMMIT_MESSAGE=1`
 
 ### pre-push 
 
 Protect pushing to master by denying directly push to master
 
-You can disable it via ENV variable `GOHOOK_UNPROTECT_MASTER`
+You can disable it via ENV variable `GOHOOKS_UNPROTECT_MASTER=1`
 
 
 ## Config
