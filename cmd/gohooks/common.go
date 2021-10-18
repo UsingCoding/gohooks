@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"gohooks/pkg/config"
-	"gohooks/pkg/executor"
-	"gohooks/pkg/vcs"
+	"github.com/UsingCoding/gohooks/pkg/config"
+	"github.com/UsingCoding/gohooks/pkg/executor"
+	"github.com/UsingCoding/gohooks/pkg/vcs"
 )
 
 // stopErr to stop execution

@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/urfave/cli/v2"
 
-	"gohooks/pkg/vcs"
+	"github.com/UsingCoding/gohooks/pkg/vcs"
 )
 
 func executeCommitMsg(ctx *cli.Context) error {
@@ -16,9 +16,9 @@ func executeCommitMsg(ctx *cli.Context) error {
 		return errors.New("not enough args to call commit-msg hook")
 	}
 
-	// Allow master push set up env var GOHOOK_UNPROTECT_MASTER
-	if !ctx.Bool("unprotect-commit-message") {
-		return errors.New("cannot push to the protected master")
+	// SKip commit message check
+	if ctx.Bool("unprotect-commit-message") {
+		return nil
 	}
 
 	commitMsgPath := ctx.Args().First()

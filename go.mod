@@ -1,4 +1,4 @@
-module gohooks
+module github.com/UsingCoding/gohooks
 
 go 1.17
 

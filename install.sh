@@ -3,7 +3,12 @@
 GO_HOOKS_DIR_NAME=".go-hooks"
 GO_HOOKS_DIR=$HOME/$GO_HOOKS_DIR_NAME
 GO_HOOKS_CONFIG=$GO_HOOKS_DIR/config.yaml
-GO_HOOK_EXECUTABLE="gohook"
+
+GO_HOOKS_EXECUTABLE="gohooks"
+
+GO_HOOKS_EXECUTABLE_PATH="$HOME/.local/bin/$GO_HOOKS_EXECUTABLE"
+
+RELEASE_URL="https://github.com/UsingCoding/gohooks/releases/download/v0.1.2/gohooks"
 
 GIT_HOOKS=("commit-msg" "pre-push")
 
@@ -18,14 +23,11 @@ CC='\033[0m' # Clear Color
 gitHookTemplate() {
     HOOK_NAME=$1
 
-    TEMPLATE=$(cat <<-EOF
+    cat <<-EOF
 #!/usr/bin/env bash
 
-\$HOME/$GO_HOOKS_DIR_NAME/$GO_HOOK_EXECUTABLE hook $HOOK_NAME "\$@"
+$GO_HOOKS_EXECUTABLE hook $HOOK_NAME "\$@"
 EOF
-    )
-
-    echo "$TEMPLATE"
 }
 
 configTemplate() {
@@ -43,8 +45,12 @@ protectedReposRegExps:
 # Apply for repos with specific names
 #        - .*SpecificName.*
 EOF
-
 }
+
+# Installing gohooks binary at $PATH
+curl -L $RELEASE_URL -o "$GO_HOOKS_EXECUTABLE_PATH" || exit 1
+chmod +x "$GO_HOOKS_EXECUTABLE_PATH"
+echo -e "${LIGHT_CYAN}$GO_HOOKS_EXECUTABLE installed at $GO_HOOKS_EXECUTABLE_PATH${CC}"
 
 if [ ! -d "$GO_HOOKS_DIR" ]; then
     echo "Creating $GO_HOOKS_DIR"

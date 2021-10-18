@@ -1,6 +1,6 @@
 package notifications
 
-import "gohooks/pkg/executor"
+import "github.com/UsingCoding/gohooks/pkg/executor"
 
 type Service interface {
 	Send(msg string) error

@@ -9,8 +9,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/urfave/cli/v2"
 
-	"gohooks/pkg/config"
-	"gohooks/pkg/notifications"
+	"github.com/UsingCoding/gohooks/pkg/config"
+	"github.com/UsingCoding/gohooks/pkg/notifications"
 )
 
 const (
@@ -69,7 +69,7 @@ func main() {
 				Subcommands: []*cli.Command{
 					{
 						Name:   "commit-msg",
-						Usage:  "Check that commit message starts with branch name. Disable via GOHOOK_UNPROTECT_COMMIT_MESSAGE=1",
+						Usage:  "Check that commit message starts with branch name. Disable via GOHOOKS_UNPROTECT_COMMIT_MESSAGE=1",
 						Action: executeCommitMsg,
 						Flags: []cli.Flag{
 							&cli.BoolFlag{
@@ -80,7 +80,7 @@ func main() {
 					},
 					{
 						Name:   "pre-push",
-						Usage:  "Protect pushing to master. Disable via GOHOOK_UNPROTECT_MASTER=1",
+						Usage:  "Protect pushing to master. Disable via GOHOOKS_UNPROTECT_MASTER=1",
 						Action: executePrePush,
 						Flags: []cli.Flag{
 							&cli.BoolFlag{

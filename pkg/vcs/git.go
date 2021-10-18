@@ -9,8 +9,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"gohooks/pkg/common"
-	"gohooks/pkg/executor"
+	"github.com/UsingCoding/gohooks/pkg/common"
+	"github.com/UsingCoding/gohooks/pkg/executor"
 )
 
 const (

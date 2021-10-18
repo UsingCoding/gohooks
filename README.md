@@ -4,6 +4,11 @@ Simple git hooks written in go that installs **globally** to your machine
 
 ## Install
 
+### Requirements
+
+- Go (`$GOPATH` used for installation)
+- Add `$GOPATH` to your `$PATH`
+
 ```shell
 curl -fsSL https://raw.github.com/UsingCoding/gohooks/master/install.sh | bash
 ```

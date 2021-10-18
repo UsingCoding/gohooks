@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/urfave/cli/v2"
 
-	"gohooks/pkg/common"
-	"gohooks/pkg/config"
-	"gohooks/pkg/vcs"
+	"github.com/UsingCoding/gohooks/pkg/common"
+	"github.com/UsingCoding/gohooks/pkg/config"
+	"github.com/UsingCoding/gohooks/pkg/vcs"
 )
 
 func shouldProtectRepo(ctx context.Context) (bool, error) {

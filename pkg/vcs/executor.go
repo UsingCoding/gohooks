@@ -1,5 +1,5 @@
 package vcs
 
-import "gohooks/pkg/executor"
+import "github.com/UsingCoding/gohooks/pkg/executor"
 
 type GitExecutor = executor.Executor
