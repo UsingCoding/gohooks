@@ -26,7 +26,7 @@ func main() {
 		Before: func(c *cli.Context) error {
 			service, err := notifications.NewNotifySendService()
 			if err != nil {
-				return err
+				service = notifications.NewDummy()
 			}
 
 			c.Context = notifications.WithService(c.Context, service)
